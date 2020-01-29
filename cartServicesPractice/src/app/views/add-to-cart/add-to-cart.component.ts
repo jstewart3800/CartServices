@@ -15,4 +15,12 @@ export class AddToCartComponent implements OnInit {
     this.cartItems = this.dService.getCartItems();
   }
 
+  removeCartItems() {
+    //call service to remove items from cart
+    this.dService.emptyCart();
+  }
+
+  removeItem(id: Iproduct) {
+    this.dService.removeItemFromCart(id);
+  }
 }

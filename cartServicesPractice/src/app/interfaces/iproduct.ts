@@ -5,4 +5,5 @@ export interface Iproduct {
     pDesc: string;
     additionalInfo: string;
     price: string;
+    qty: number;
 }
