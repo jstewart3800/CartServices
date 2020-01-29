@@ -1,1 +1,23 @@
-<p>add-to-cart works!</p>
+<div class="container">
+    <div class="row" *ngFor="let cItem of cartItems">
+        <div class="col">
+            <div class="div list-group-item">
+                <div class="row">
+                    <div class="col-3">Put Image Here</div>
+                    <div class="col-3">
+                        {{cItem.pName}}
+                    </div>
+                    <div class="col-3">
+                        {{cItem.pDesc}}
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+                <br>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>

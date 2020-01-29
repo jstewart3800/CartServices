@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Iproduct } from 'src/app/interfaces/iproduct';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent implements OnInit {
-
-  constructor() { }
+  cartItems: Iproduct[];
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.cartItems = this.dService.getCartItems();
   }
 
 }
